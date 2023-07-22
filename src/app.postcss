@@ -1,11 +1,24 @@
 /* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
+
 @tailwind base;
 
 @layer base {
 	body {
-		@apply dark:bg-zinc-900 dark:text-white;
+		@apply dark:bg-zinc-900 dark:text-white font-jetmono;
 	}
 }
 
 @tailwind components;
+
+@layer components {
+	.social-button {
+		@apply rounded-full inline-flex items-center justify-center overflow-hidden bg-gradient-to-r p-0.5 font-poppins font-bold focus:outline-none;
+	}
+
+	.social-button-text {
+		@apply w-full rounded-full bg-zinc-900 py-2 px-8 transition-all duration-200 ease-in-out group-hover:bg-opacity-0;
+	}
+}
+
 @tailwind utilities;
