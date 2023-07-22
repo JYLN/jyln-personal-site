@@ -1,5 +1,6 @@
 <script lang="ts">
 	import skills from '$lib/data/skills.json';
+	import socials from '$lib/data/socials.json';
 	import tippy from 'tippy.js';
 	import 'tippy.js/dist/tippy.css';
 
@@ -26,35 +27,21 @@
 			web development.
 		</p>
 		<aside class="social-buttons flex-col gap-4 text-center lg:flex-row lg:items-center lg:gap-5">
-			<a
-				href="/blog"
-				class="social-button group from-emerald-400 to-blue-600 group-hover:from-emerald-400 group-hover:to-blue-600"
-			>
-				<span class="social-button-text">
-					<i class="bx bxs-edit bx-fw" />
-					<span>Blog</span>
-				</span>
-			</a>
-			<a
-				href="https://github.com/JYLN"
-				target="_blank"
-				class="social-button group from-orange-400 to-purple-600 group-hover:from-orange-400 group-hover:to-purple-600"
-			>
-				<span class="social-button-text">
-					<i class="bx bxl-github bx-fw" />
-					<span>Github</span>
-				</span>
-			</a>
-			<a
-				href="https://www.linkedin.com/in/jyln/"
-				target="_blank"
-				class="social-button group from-amber-400 to-rose-600 group-hover:from-amber-400 group-hover:to-rose-600"
-			>
-				<span class="social-button-text">
-					<i class="bx bxl-linkedin-square bx-fw" />
-					<span>LinkedIn</span>
-				</span>
-			</a>
+			{#each socials as social}
+				{#if social.big_button}
+					<a
+						href={social.link}
+						class={`social-button group from-${social.colors?.[0]}-400 to-${social.colors?.[1]}-600
+              group-hover:from-${social.colors?.[0]}-400 group-hover:to-${social.colors?.[1]}-600`}
+						target={social.link.includes('https://') ? '_blank' : undefined}
+					>
+						<span class="social-button-text">
+							<i class="bx {social.icon_class} bx-fw" />
+							<span>{social.name}</span>
+						</span>
+					</a>
+				{/if}
+			{/each}
 		</aside>
 	</article>
 	<figure class="hero-img w-1/2 md:w-1/3">
