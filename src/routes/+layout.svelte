@@ -1,5 +1,4 @@
-<script>
-	import 'remixicon/fonts/remixicon.css';
+<script lang="ts">
 	import '../app.postcss';
 </script>
 

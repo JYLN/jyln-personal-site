@@ -1,4 +1,11 @@
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
+
+@layer base {
+	body {
+		@apply dark:bg-zinc-900 dark:text-white;
+	}
+}
+
 @tailwind components;
 @tailwind utilities;
