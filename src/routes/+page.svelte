@@ -1,4 +1,5 @@
 <script lang="ts">
+	import skills from '$lib/data/skills.json';
 	import tippy from 'tippy.js';
 	import 'tippy.js/dist/tippy.css';
 
@@ -62,16 +63,9 @@
 </section>
 
 <footer class="skill-footer text-3xl gap-2 md:text-5xl md:gap-4">
-	<i class="bx bxl-html5" use:tooltip={{ content: 'HTML' }} />
-	<i class="bx bxl-css3" use:tooltip={{ content: 'CSS' }} />
-	<i class="bx bxl-sass" use:tooltip={{ content: 'Sass' }} />
-	<i class="bx bxl-tailwind-css" use:tooltip={{ content: 'TailwindCSS' }} />
-	<i class="bx bxl-javascript" use:tooltip={{ content: 'JavaScript' }} />
-	<i class="bx bxl-typescript" use:tooltip={{ content: 'TypeScript' }} />
-	<i class="bx bxl-react" use:tooltip={{ content: 'React' }} />
-	<i class="bx bxl-nodejs" use:tooltip={{ content: 'Node.JS' }} />
-	<i class="bx bxl-git" use:tooltip={{ content: 'Git' }} />
-	<i class="bx bxl-github" use:tooltip={{ content: 'Github' }} />
+	{#each skills as skill}
+		<i class="bx bxl-{skill.icon}" use:tooltip={{ content: skill.name }} />
+	{/each}
 </footer>
 
 <style lang="postcss">

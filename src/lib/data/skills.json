@@ -1,0 +1,42 @@
+[
+	{
+		"name": "HTML",
+		"icon": "html5"
+	},
+	{
+		"name": "CSS",
+		"icon": "css3"
+	},
+	{
+		"name": "Sass",
+		"icon": "sass"
+	},
+	{
+		"name": "TailwindCSS",
+		"icon": "tailwind-css"
+	},
+	{
+		"name": "JavaScript",
+		"icon": "javascript"
+	},
+	{
+		"name": "TypeScript",
+		"icon": "typescript"
+	},
+	{
+		"name": "React",
+		"icon": "react"
+	},
+	{
+		"name": "Node.JS",
+		"icon": "nodejs"
+	},
+	{
+		"name": "Git",
+		"icon": "git"
+	},
+	{
+		"name": "Github",
+		"icon": "github"
+	}
+]
