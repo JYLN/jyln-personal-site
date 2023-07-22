@@ -17,14 +17,14 @@
 	<title>Jaylen Baxter</title>
 </svelte:head>
 
-<section class="hero">
-	<article class="hero-text md:w-2/3">
-		<h1 class="hero-text-header text-6xl md:text-8xl">Hi, I'm Jaylen!</h1>
+<section class="hero flex-col-reverse gap-10 lg:flex-row lg:gap-6">
+	<article class="max-w-full md:w-2/3">
+		<h1 class="hero-text-header text-5xl md:text-7xl lg:text-8xl">Hi, I'm Jaylen!</h1>
 		<p class="hero-text-desc text-base lg:text-xl">
 			Just a small town guy, currently working as a network administrator and studying full-stack
 			web development.
 		</p>
-		<aside class="social-buttons flex-col gap-4 text-center md:flex-row md:items-center md:gap-5">
+		<aside class="social-buttons flex-col gap-4 text-center lg:flex-row lg:items-center lg:gap-5">
 			<a
 				href="/blog"
 				class="social-button group from-emerald-400 to-blue-600 group-hover:from-emerald-400 group-hover:to-blue-600"
@@ -56,12 +56,12 @@
 			</a>
 		</aside>
 	</article>
-	<figure class="hero-img hidden md:flex">
+	<figure class="hero-img w-1/2 md:w-1/3">
 		<img src="/jaylen-bust.svg" alt="Cartoon Bust of Jaylen" />
 	</figure>
 </section>
 
-<footer class="skill-footer text-4xl gap-2 md:text-5xl md:gap-4">
+<footer class="skill-footer text-3xl gap-2 md:text-5xl md:gap-4">
 	<i class="bx bxl-html5" use:tooltip={{ content: 'HTML' }} />
 	<i class="bx bxl-css3" use:tooltip={{ content: 'CSS' }} />
 	<i class="bx bxl-sass" use:tooltip={{ content: 'Sass' }} />
@@ -76,11 +76,7 @@
 
 <style lang="postcss">
 	.hero {
-		@apply container mx-auto flex h-[90%] items-center gap-6 py-24 px-12;
-	}
-
-	.hero-text {
-		@apply max-w-full;
+		@apply container mx-auto flex h-[90%] items-center justify-center py-24 px-12;
 	}
 
 	.hero-text-header {
@@ -92,7 +88,7 @@
 	}
 
 	.hero-img {
-		@apply w-1/3 rounded-2xl bg-gradient-to-r from-amber-100 to-rose-300 p-6 drop-shadow-md;
+		@apply rounded-2xl bg-gradient-to-r from-amber-100 to-rose-300 p-6 drop-shadow-md;
 	}
 
 	.social-buttons {
