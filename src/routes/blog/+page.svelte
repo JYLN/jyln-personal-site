@@ -1,5 +1,7 @@
 <script lang="ts">
 	import BlogCard from '$lib/components/BlogCard.svelte';
+
+	export let data;
 </script>
 
 <svelte:head>
@@ -22,14 +24,9 @@
 	<aside
 		class="py-12 grid grid-cols-1 gap-3 auto-rows-auto justify-items-center md:grid-cols-2 xl:grid-cols-4"
 	>
-		<BlogCard />
-		<BlogCard />
-		<BlogCard />
-		<BlogCard />
-		<BlogCard />
-		<BlogCard />
-		<BlogCard />
-		<BlogCard />
+		{#each data.posts.allNonPinned as post}
+			<BlogCard {post} />
+		{/each}
 	</aside>
 </section>
 
