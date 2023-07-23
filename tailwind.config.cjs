@@ -9,6 +9,12 @@ const config = {
 			fontFamily: {
 				poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
 				jetmono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
+			},
+			keyframes: {
+				blink: { '50%': { opacity: 0 } }
+			},
+			animation: {
+				blinking: 'blink 1.5s ease-in-out infinite'
 			}
 		}
 	},

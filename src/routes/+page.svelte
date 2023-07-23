@@ -1,5 +1,6 @@
 <script lang="ts">
 	import HeroButton from '$lib/components/HeroButton.svelte';
+	import Typer from '$lib/components/Typer.svelte';
 	import skills from '$lib/data/skills.json';
 	import { tooltip } from '$lib/utils/tooltip';
 </script>
@@ -10,7 +11,12 @@
 
 <section class="hero flex-col-reverse gap-10 lg:flex-row lg:gap-6">
 	<article class="max-w-full md:w-2/3">
-		<h1 class="hero-text-header text-5xl md:text-7xl">Hi, I'm Jaylen!</h1>
+		<Typer
+			element="h1"
+			tw_class="hero-text-header text-5xl md:text-7xl"
+			words="Hi, I'm Jaylen!"
+			speed={90}
+		/>
 		<p class="hero-text-desc text-base lg:text-xl">
 			Just a small town guy, currently working as a network administrator and studying full-stack
 			web development.
@@ -48,10 +54,6 @@
 <style lang="postcss">
 	.hero {
 		@apply container mx-auto flex h-[90%] items-center justify-center py-24 px-12;
-	}
-
-	.hero-text-header {
-		@apply bg-gradient-to-r from-amber-100 to-rose-300 bg-clip-text font-extrabold text-transparent font-poppins tracking-tight;
 	}
 
 	.hero-text-desc {
