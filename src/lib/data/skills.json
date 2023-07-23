@@ -24,6 +24,10 @@
 		"icon": "typescript"
 	},
 	{
+		"name": "Svelte",
+		"icon": "svelte-logo-clipped"
+	},
+	{
 		"name": "React",
 		"icon": "react"
 	},

@@ -47,7 +47,11 @@
 
 <footer class="skill-footer text-3xl gap-2 md:text-5xl md:gap-4">
 	{#each skills as skill}
-		<i class="bx bxl-{skill.icon}" use:tooltip={{ content: skill.name }} />
+		{#if skill.name !== 'Svelte'}
+			<i class="bx bxl-{skill.icon}" use:tooltip={{ content: skill.name }} />
+		{:else}
+			<i class="icon-{skill.icon}" use:tooltip={{ content: skill.name }} />
+		{/if}
 	{/each}
 </footer>
 
