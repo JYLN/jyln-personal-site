@@ -1,6 +1,6 @@
 <script lang="ts">
+	import HeroButton from '$lib/components/HeroButton.svelte';
 	import skills from '$lib/data/skills.json';
-	import socials from '$lib/data/socials.json';
 	import { tooltip } from '$lib/utils/tooltip';
 </script>
 
@@ -16,21 +16,22 @@
 			web development.
 		</p>
 		<aside class="social-buttons flex-col gap-4 text-center lg:flex-row lg:items-center lg:gap-5">
-			{#each socials as social}
-				{#if social.big_button}
-					<a
-						href={social.link}
-						class={`social-button group from-${social.colors?.[0]}-400 to-${social.colors?.[1]}-600
-              group-hover:from-${social.colors?.[0]}-400 group-hover:to-${social.colors?.[1]}-600`}
-						target={social.link.includes('https://') ? '_blank' : undefined}
-					>
-						<span class="social-button-text">
-							<i class="bx {social.icon_class} bx-fw" />
-							<span>{social.name}</span>
-						</span>
-					</a>
-				{/if}
-			{/each}
+			<HeroButton href="/blog" colors="from-emerald-400 to-blue-600">
+				<i class="bx bxs-edit bx-fw" />
+				<span>Blog</span>
+			</HeroButton>
+			<HeroButton href="https://github.com/JYLN" colors="from-orange-400 to-purple-600">
+				<i class="bx bxl-github bx-fw" />
+				<span>Github</span>
+			</HeroButton>
+			<HeroButton href="https://www.linkedin.com/in/jyln/" colors="from-amber-400 to-rose-600">
+				<i class="bx bxl-linkedin-square bx-fw" />
+				<span>LinkedIn</span>
+			</HeroButton>
+			<HeroButton href="" disabled={true}>
+				<i class="bx bxs-report bx-fw" />
+				<span>Portfolio</span>
+			</HeroButton>
 		</aside>
 	</article>
 	<figure class="hero-img w-1/2 md:w-1/3">
