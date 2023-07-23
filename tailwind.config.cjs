@@ -7,7 +7,8 @@ const config = {
 		extend: {
 			fontFamily: {
 				poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
-				jetmono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
+				jetmono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+				inter: ['Inter', ...defaultTheme.fontFamily.sans]
 			},
 			keyframes: {
 				blink: { '50%': { opacity: 0 } },
