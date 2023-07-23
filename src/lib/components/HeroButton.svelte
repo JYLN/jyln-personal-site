@@ -7,7 +7,7 @@
 <a
 	class={disabled
 		? 'btn disabled'
-		: `btn group bg-gradient-to-r ${colors} transition-all ease-in-out duration-150 focus:outline-none active:scale-90`}
+		: `btn group bg-gradient-to-r ${colors} transition ease-in-out duration-150 focus:outline-none active:scale-90`}
 	{href}
 	target={href.includes('https://') ? '_blank' : undefined}
 >
