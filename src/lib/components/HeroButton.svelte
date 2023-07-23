@@ -1,12 +1,12 @@
 <script lang="ts">
 	export let href: string;
-	export let colors: string = 'bg-zing-600';
+	export let colors: string = 'bg-zinc-600';
 	export let disabled: boolean = false;
 </script>
 
 <a
 	class={disabled
-		? 'btn disabled'
+		? 'btn disabled hover:animate-wiggle active:animate-wiggle'
 		: `btn group bg-gradient-to-r ${colors} transition ease-in-out duration-150 focus:outline-none active:scale-90`}
 	{href}
 	target={href.includes('https://') ? '_blank' : undefined}
