@@ -21,7 +21,7 @@
 
 <section class="hero flex-col-reverse gap-10 lg:flex-row lg:gap-6">
 	<article class="max-w-full md:w-2/3">
-		<h1 class="hero-text-header text-5xl md:text-7xl lg:text-8xl">Hi, I'm Jaylen!</h1>
+		<h1 class="hero-text-header text-5xl md:text-7xl">Hi, I'm Jaylen!</h1>
 		<p class="hero-text-desc text-base lg:text-xl">
 			Just a small town guy, currently working as a network administrator and studying full-stack
 			web development.
