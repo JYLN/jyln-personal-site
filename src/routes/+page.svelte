@@ -1,18 +1,7 @@
 <script lang="ts">
 	import skills from '$lib/data/skills.json';
 	import socials from '$lib/data/socials.json';
-	import tippy from 'tippy.js';
-	import 'tippy.js/dist/tippy.css';
-
-	function tooltip(node: HTMLUnknownElement, options: Object) {
-		const tooltip = tippy(node, options);
-
-		return {
-			destroy() {
-				tooltip.destroy();
-			}
-		};
-	}
+	import { tooltip } from '$lib/utils/tooltip';
 </script>
 
 <svelte:head>
