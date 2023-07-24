@@ -4,13 +4,20 @@ import { json } from '@sveltejs/kit';
 export async function GET() {
 	const allPosts = (await fetchMarkdownPosts()).filter((post) => post.meta.draft !== true);
 
-	const sorted = allPosts.sort((a, b) => {
-		return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aPinned = a.meta.tags.includes('pinned');
+		const bPinned = b.meta.tags.includes('pinned');
+
+		if (aPinned && bPinned) {
+			return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
+		}
+
+		if (!aPinned && !bPinned) {
+			return new Date(a.meta.date).getTime() < new Date(b.meta.date).getTime() ? -1 : 1;
+		}
+
+		return aPinned ? -1 : 1;
 	});
 
-	const pinned = sorted.filter((post) => post.meta.tags.includes('pinned'));
-
-	const allNonPinned = sorted.filter((post) => !post.meta.tags.includes('pinned'));
-
-	return json({ pinned, allNonPinned });
+	return json(sortedPosts);
 }

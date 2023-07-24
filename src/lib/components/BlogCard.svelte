@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PostResponse } from '$lib/utils/fetchMarkdownPosts';
+	import { tooltip } from '$lib/utils/tooltip';
 
 	export let post: PostResponse;
 </script>
@@ -7,7 +8,17 @@
 <div
 	class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-zinc-700"
 >
-	<h5 class="mb-2 text-2xl font-bold font-inter tracking-tight text-gray-900 dark:text-white">
+	<h5
+		class="mb-2 text-2xl font-bold font-inter tracking-tight inline-flex items-center gap-2 text-gray-900 dark:text-white"
+	>
+		{#if post.meta.tags.includes('pinned')}
+			<span class="flex h-3 w-3 relative" use:tooltip={{ content: 'Pinned' }}>
+				<span
+					class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+				/>
+				<span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+			</span>
+		{/if}
 		{post.meta.title}
 	</h5>
 	<p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">
@@ -18,7 +29,7 @@
 	</p>
 	<a
 		href="/blog/{post.path}"
-		class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+		class="inline-flex items-center px-3 py-2 text-sm font-medium text-center transition text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:scale-90 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700"
 	>
 		Read more
 		<svg
