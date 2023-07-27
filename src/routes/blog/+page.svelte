@@ -9,27 +9,18 @@
 	<title>Blog - Jaylen Baxter</title>
 </svelte:head>
 
-<section class="px-4 md:px-0">
-	<HeroButton href="/" colors={'from-orange-400 to-purple-600'}>
-		<i class="bx bx-left-arrow-alt bx-fw" />
-		<span>Go back home</span>
-	</HeroButton>
+<section>
+	<header>
+		<HeroButton href="/" colors={'from-orange-400 to-purple-600'}>
+			<i class="bx bx-left-arrow-alt bx-fw" />
+			<span>Go back home</span>
+		</HeroButton>
 
-	<header class="py-6 border-b-2 border-b-zinc-600">
-		<h1
-			class="bg-gradient-to-r leading-normal from-emerald-400 to-blue-600 max-w-md text-transparent bg-clip-text text-7xl font-poppins font-extrabold tracking-tight"
-		>
-			Blog
-		</h1>
-		<p>
-			Just a small blog featuring my adventures learning web development and other things
-			technology!
-		</p>
+		<h2>Blog</h2>
+		<p>Stories featuring my journey learning web development and other things technology!</p>
 	</header>
 
-	<aside
-		class="py-12 grid grid-cols-1 gap-3 auto-rows-auto justify-items-center md:grid-cols-2 xl:grid-cols-4"
-	>
+	<aside>
 		{#each data.posts as post}
 			<BlogCard {post} />
 		{/each}
@@ -38,10 +29,22 @@
 
 <style lang="postcss">
 	section {
-		@apply container mx-auto pt-6;
+		@apply mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14;
+	}
+
+	header {
+		@apply mx-auto mb-10 max-w-6xl border-b-2 border-zinc-600 lg:mb-14;
+	}
+
+	header h2 {
+		@apply font-poppins my-3 max-w-min bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text py-3 text-5xl font-extrabold tracking-tight text-transparent;
 	}
 
 	header p {
-		@apply mt-2;
+		@apply my-3 text-zinc-400;
+	}
+
+	aside {
+		@apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
 	}
 </style>
