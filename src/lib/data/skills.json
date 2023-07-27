@@ -4,6 +4,10 @@
 		"icon": "html5"
 	},
 	{
+		"name": "Markdown",
+		"icon": "markdown"
+	},
+	{
 		"name": "CSS",
 		"icon": "css3"
 	},

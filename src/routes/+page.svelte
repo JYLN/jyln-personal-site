@@ -50,7 +50,7 @@
 		{#if skill.name !== 'Svelte'}
 			<i class="bx bxl-{skill.icon}" use:tooltip={{ content: skill.name }} />
 		{:else}
-			<i class="icon-{skill.icon}" use:tooltip={{ content: skill.name }} />
+			<i class="icon-{skill.icon} text-[2.5rem]" use:tooltip={{ content: skill.name }} />
 		{/if}
 	{/each}
 </footer>
