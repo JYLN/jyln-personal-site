@@ -9,19 +9,14 @@
 	<title>Jaylen Baxter</title>
 </svelte:head>
 
-<section class="hero flex-col-reverse gap-10 lg:flex-row lg:gap-6">
-	<article class="max-w-full md:w-2/3">
-		<Typer
-			element="h1"
-			tw_class="hero-text-header text-5xl md:text-7xl"
-			words="Hi, I'm Jaylen!"
-			speed={90}
-		/>
-		<p class="hero-text-desc text-base lg:text-xl">
+<section class="hero">
+	<div class="max-w-full md:w-2/3">
+		<Typer element="h1" tw_class="hero-text-header" words="Hi, I'm Jaylen!" speed={90} />
+		<p class="hero-text-desc">
 			Just a small town guy, currently working as a network administrator and studying full-stack
 			web development.
 		</p>
-		<aside class="social-buttons flex-col gap-4 text-center lg:flex-row lg:items-center lg:gap-5">
+		<aside class="social-buttons">
 			<HeroButton href="/blog" colors="from-emerald-400 to-blue-600">
 				<i class="bx bxs-edit bx-fw" />
 				<span>Blog</span>
@@ -39,40 +34,43 @@
 				<span>Portfolio</span>
 			</HeroButton>
 		</aside>
-	</article>
-	<figure class="hero-img w-1/2 md:w-1/3">
+	</div>
+	<figure class="hero-img">
 		<img src="/jaylen-bust.svg" alt="Cartoon Bust of Jaylen" />
 	</figure>
 </section>
 
-<footer class="skill-footer text-3xl gap-2 md:text-5xl md:gap-4">
+<footer class="skill-footer">
 	{#each skills as skill}
 		{#if skill.name !== 'Svelte'}
 			<i class="bx bxl-{skill.icon}" use:tooltip={{ content: skill.name }} />
 		{:else}
-			<i class="icon-{skill.icon} text-[2.5rem]" use:tooltip={{ content: skill.name }} />
+			<i
+				class="icon-{skill.icon} text-[1.65rem] md:text-[2.5rem]"
+				use:tooltip={{ content: skill.name }}
+			/>
 		{/if}
 	{/each}
 </footer>
 
 <style lang="postcss">
 	.hero {
-		@apply container mx-auto flex h-[90%] items-center justify-center py-24 px-12;
+		@apply mx-auto flex h-[90%] max-w-[95%] flex-col-reverse items-center justify-center gap-10 px-12 py-24 lg:flex-row lg:gap-6;
 	}
 
 	.hero-text-desc {
-		@apply mt-4;
+		@apply mt-4 text-base lg:text-xl;
 	}
 
 	.hero-img {
-		@apply rounded-2xl bg-gradient-to-r from-amber-100 to-rose-300 p-6 drop-shadow-md;
+		@apply w-1/2 rounded-2xl bg-gradient-to-r from-amber-100 to-rose-300 p-6 drop-shadow-md md:w-1/3;
 	}
 
 	.social-buttons {
-		@apply mt-9 flex;
+		@apply mt-9 flex flex-col gap-4 text-center lg:flex-row lg:items-center lg:gap-5;
 	}
 
 	.skill-footer {
-		@apply fixed bottom-0 w-full h-[10%] flex justify-center items-center bg-gradient-to-r from-amber-100 to-rose-300 text-zinc-900;
+		@apply fixed bottom-0 flex h-[10%] w-full items-center justify-center gap-1 bg-gradient-to-r from-amber-100 to-rose-300 text-3xl text-zinc-900 sm:gap-2 md:gap-4 md:text-5xl;
 	}
 </style>
