@@ -1,5 +1,5 @@
 /* Write your global styles here, in PostCSS syntax */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&JetBrains+Mono:wght@400;700&family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&JetBrains+Mono:wght@400;700&family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap');
 @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 @import url('$lib/fonts/custom-icons/style.css');
 
@@ -7,7 +7,7 @@
 
 @layer base {
 	body {
-		@apply dark:bg-zinc-900 dark:text-white font-jetmono;
+		@apply font-jetmono dark:bg-zinc-900 dark:text-white;
 	}
 }
 
@@ -15,7 +15,55 @@
 
 @layer components {
 	.hero-text-header {
-		@apply bg-gradient-to-r from-amber-100 to-rose-300 bg-clip-text font-extrabold text-transparent font-poppins tracking-tight;
+		@apply bg-gradient-to-r from-amber-100 to-rose-300 bg-clip-text font-poppins font-extrabold tracking-tight text-transparent;
+	}
+
+	.prose {
+		@apply space-y-5 md:space-y-8;
+	}
+
+	.prose :is(h3) {
+		@apply text-2xl font-semibold;
+	}
+
+	.prose :is(a) {
+		@apply text-blue-500 decoration-2 transition duration-150 ease-in-out hover:text-blue-700 hover:underline;
+	}
+
+	.prose :is(img) {
+		@apply w-full rounded-xl object-cover;
+	}
+
+	.prose :is(figcaption) {
+		@apply mt-3 text-center text-sm text-zinc-400;
+	}
+
+	.prose :is(blockquote) {
+		@apply p-4 text-center sm:px-7;
+	}
+
+	.prose :is(blockquote p) {
+		@apply text-xl font-medium md:text-2xl md:leading-normal;
+	}
+
+	.prose :is(blockquote footer) {
+		@apply mt-5 text-lg italic text-zinc-400;
+	}
+
+	.prose :is(ul, ol) {
+		@apply list-outside space-y-2 pl-5 text-lg;
+	}
+
+	.prose :is(ul, ol) li {
+		@apply pl-2;
+	}
+
+	.prose :is(ul) {
+		@apply list-disc;
+	}
+
+	.prose :is(ol) {
+		@apply list-decimal;
 	}
 }
 
