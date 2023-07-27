@@ -16,11 +16,13 @@ const config = {
 					'0%, 50%': { transform: 'rotate(-5deg)' },
 					'25%': { transform: 'rotate(5deg)' },
 					'100%': { transform: 'rotate(0deg)' }
-				}
+				},
+				gap: { '0%': { gap: '0.5rem' }, '100%': { gap: '1rem' } }
 			},
 			animation: {
 				blinking: 'blink 1.5s ease-in-out infinite',
-				wiggle: 'wiggle 0.5s ease-in-out'
+				wiggle: 'wiggle 0.5s ease-in-out',
+				gap: 'gap 0.5s ease-in-out'
 			}
 		}
 	},
