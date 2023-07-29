@@ -9,3 +9,4 @@ This is in no certain order
 - [x] Add `|` cursor to `Typer` component while typing, then turn to `_` blink when finished
 - [x] Fix homepage responsive layout as image is overflowing on high res screens
   - Likely need to return to using the `container` Tailwind class than the `max-w` class
+- [ ] Light/Dark Theme Switcher and Styles
