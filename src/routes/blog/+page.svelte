@@ -1,6 +1,6 @@
 <script lang="ts">
+	import BigButton from '$lib/components/BigButton.svelte';
 	import BlogCard from '$lib/components/BlogCard.svelte';
-	import HeroButton from '$lib/components/HeroButton.svelte';
 
 	export let data;
 </script>
@@ -11,10 +11,10 @@
 
 <section>
 	<header>
-		<HeroButton href="/" colors={'from-orange-400 to-purple-600'}>
+		<BigButton href="/" colors={'from-orange-400 to-purple-600'}>
 			<i class="bx bx-left-arrow-alt bx-fw" />
 			<span>Go back home</span>
-		</HeroButton>
+		</BigButton>
 
 		<h2>Blog</h2>
 		<p>Stories featuring my journey learning web development and other things technology!</p>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeroButton from '$lib/components/HeroButton.svelte';
+	import BigButton from '$lib/components/BigButton.svelte';
 	import Typer from '$lib/components/Typer.svelte';
 	import skills from '$lib/data/skills.json';
 	import { tooltip } from '$lib/utils/tooltip';
@@ -19,22 +19,22 @@
 			web development.
 		</p>
 		<aside class="social-buttons">
-			<HeroButton href="/blog" colors="from-emerald-400 to-blue-600">
+			<BigButton href="/blog" colors="from-emerald-400 to-blue-600">
 				<i class="bx bxs-edit bx-fw" />
 				<span>Blog</span>
-			</HeroButton>
-			<HeroButton href="https://github.com/JYLN" colors="from-orange-400 to-purple-600">
+			</BigButton>
+			<BigButton href="https://github.com/JYLN" colors="from-orange-400 to-purple-600">
 				<i class="bx bxl-github bx-fw" />
 				<span>Github</span>
-			</HeroButton>
-			<HeroButton href="https://www.linkedin.com/in/jyln/" colors="from-amber-400 to-rose-600">
+			</BigButton>
+			<BigButton href="https://www.linkedin.com/in/jyln/" colors="from-amber-400 to-rose-600">
 				<i class="bx bxl-linkedin-square bx-fw" />
 				<span>LinkedIn</span>
-			</HeroButton>
-			<HeroButton href="" disabled={true}>
+			</BigButton>
+			<BigButton href="" disabled={true}>
 				<i class="bx bxs-report bx-fw" />
 				<span>Portfolio</span>
-			</HeroButton>
+			</BigButton>
 		</aside>
 	</div>
 	<figure class="hero-img">

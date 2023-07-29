@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeroButton from '$lib/components/HeroButton.svelte';
+	import BigButton from '$lib/components/BigButton.svelte';
 
 	export let data;
 </script>
@@ -7,10 +7,10 @@
 <article>
 	<div class="max-w-4xl">
 		<nav>
-			<HeroButton href="/blog" colors={'from-amber-400 to-rose-600'}>
+			<BigButton href="/blog" colors={'from-amber-400 to-rose-600'}>
 				<i class="bx bx-left-arrow-alt bx-fw" />
 				<span>Go back to blog</span>
-			</HeroButton>
+			</BigButton>
 
 			<ul>
 				<li>
