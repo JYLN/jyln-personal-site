@@ -4,23 +4,8 @@
 	export let data;
 </script>
 
-<!-- <article class="px-4 md:px-0">
-	<HeroButton href="/blog" colors={'from-amber-400 to-rose-600'}>
-		<i class="bx bx-left-arrow-alt" />
-		<span>Go back to blog</span>
-	</HeroButton>
-
-	<header>
-		<h1>{data.title}</h1>
-		<p class="published">Published: {new Date(data.date).toLocaleDateString()}</p>
-	</header>
-
-	<svelte:component this={data.content} />
-</article> -->
-
 <article>
-	<div class="max-w-2xl">
-		<!-- Blog Nav -->
+	<div class="max-w-4xl">
 		<nav>
 			<HeroButton href="/blog" colors={'from-amber-400 to-rose-600'}>
 				<i class="bx bx-left-arrow-alt bx-fw" />
@@ -35,7 +20,6 @@
 			</ul>
 		</nav>
 
-		<!-- Content -->
 		<section class="font-inter">
 			<h2>
 				{data.title}
@@ -45,13 +29,12 @@
 				<svelte:component this={data.content} class="content" />
 			</div>
 		</section>
-		<!-- End Content -->
 	</div>
 </article>
 
 <style lang="postcss">
 	article {
-		@apply mx-auto max-w-3xl px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pt-10;
+		@apply mx-auto max-w-max px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pt-10;
 	}
 
 	nav {
