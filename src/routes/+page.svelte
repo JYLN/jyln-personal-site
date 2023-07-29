@@ -3,15 +3,17 @@
 	import Typer from '$lib/components/Typer.svelte';
 	import skills from '$lib/data/skills.json';
 	import { tooltip } from '$lib/utils/tooltip';
+	import { quartIn } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
 </script>
 
 <svelte:head>
 	<title>Jaylen Baxter</title>
 </svelte:head>
 
-<section class="hero">
+<section class="hero" in:fly={{ delay: 100, duration: 300, y: 250, easing: quartIn }}>
 	<div class="max-w-full md:w-2/3">
-		<Typer element="h1" tw_class="hero-text-header" words="Hi, I'm Jaylen!" speed={90} />
+		<Typer element="h1" tw_class="hero-text-header" words="Hi, I'm Jaylen!" speed={110} />
 		<p class="hero-text-desc">
 			Just a small town guy, currently working as a network administrator and studying full-stack
 			web development.
