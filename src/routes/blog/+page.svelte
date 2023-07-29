@@ -33,15 +33,15 @@
 	}
 
 	header {
-		@apply mx-auto mb-10 max-w-6xl border-b-2 border-zinc-600 lg:mb-14;
+		@apply mb-10 border-b-2 border-zinc-600 lg:mb-14;
 	}
 
 	header h2 {
-		@apply my-3 max-w-min bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text py-3 font-poppins text-5xl font-extrabold tracking-tight text-transparent;
+		@apply my-3 max-w-min bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text py-3 font-poppins text-7xl font-extrabold tracking-tight text-transparent;
 	}
 
 	header p {
-		@apply my-3 text-zinc-400;
+		@apply my-4 text-zinc-300;
 	}
 
 	aside {
