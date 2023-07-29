@@ -20,7 +20,7 @@ const config = {
 				gap: { '0%': { gap: '0.5rem' }, '100%': { gap: '1rem' } }
 			},
 			animation: {
-				blinking: 'blink 1.5s ease-in-out infinite',
+				blinking: 'blink 1.25s ease-in-out infinite',
 				wiggle: 'wiggle 0.5s ease-in-out',
 				gap: 'gap 0.5s ease-in-out'
 			}
