@@ -37,7 +37,7 @@
 	}
 
 	header h2 {
-		@apply font-poppins my-3 max-w-min bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text py-3 text-5xl font-extrabold tracking-tight text-transparent;
+		@apply my-3 max-w-min bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text py-3 font-poppins text-5xl font-extrabold tracking-tight text-transparent;
 	}
 
 	header p {

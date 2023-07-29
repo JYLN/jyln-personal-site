@@ -2,13 +2,13 @@
 title: Test Content
 description: This is my first blog post
 date: 2023-07-23T19:25:15.119Z
-preview: ""
+preview: ''
 draft: false
 tags:
   - pinned
 categories: []
 slug: test-content
-repository: ""
+repository: ''
 ---
 
 At preline, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also helps them grow.
@@ -22,6 +22,7 @@ As we've grown, we've seen how Preline has helped companies such as Spotify, Mic
 That's why we are excited to share that we now have a [free version of Preline](https://preline.co), which will allow individual designers, startups, and other small teams the chance to create a culture of openness early on.
 
 > To say that switching to Preline has been life-changing is an understatement. My business has tripled and I got my life back.
+>
 > <footer>Nicole Something</footer>
 
 ![A man and a woman looking at a cell phone](https://images.unsplash.com/photo-1670272498380-eb330b61f3cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)

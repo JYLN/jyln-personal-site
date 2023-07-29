@@ -53,15 +53,15 @@
 	}
 
 	.card-body h3 {
-		@apply font-poppins inline-flex items-center gap-3 text-xl font-bold tracking-tight;
+		@apply inline-flex items-center gap-3 font-poppins text-xl font-bold tracking-tight;
 	}
 
 	.card-body p {
-		@apply font-inter mt-2;
+		@apply mt-2 font-inter;
 	}
 
 	.card-body a {
-		@apply hover:animate-gap mt-3 inline-flex items-center gap-2 text-sm font-medium text-blue-500 transition-all duration-300 ease-in-out hover:gap-4 hover:text-blue-700;
+		@apply mt-3 inline-flex items-center gap-2 text-sm font-medium text-blue-500 transition-all duration-300 ease-in-out hover:animate-gap hover:gap-4 hover:text-blue-700;
 	}
 
 	.card-footer {

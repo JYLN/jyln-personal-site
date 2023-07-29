@@ -7,11 +7,11 @@
 <a
 	class={disabled
 		? 'btn disabled hover:animate-wiggle active:animate-wiggle'
-		: `btn group bg-gradient-to-r ${colors} transition ease-in-out duration-150 focus:outline-none active:scale-90`}
+		: `btn group bg-gradient-to-r ${colors} transition duration-150 ease-in-out focus:outline-none active:scale-90`}
 	{href}
 	target={href.includes('https://') ? '_blank' : undefined}
 >
-	<span class="w-full rounded-full bg-zinc-900 py-2 px-8 transition group-hover:bg-opacity-0">
+	<span class="w-full rounded-full bg-zinc-900 px-8 py-2 transition group-hover:bg-opacity-0">
 		<slot />
 	</span>
 </a>
@@ -22,6 +22,6 @@
 	}
 
 	.disabled {
-		@apply bg-zinc-600 cursor-not-allowed text-zinc-500;
+		@apply cursor-not-allowed bg-zinc-600 text-zinc-500;
 	}
 </style>

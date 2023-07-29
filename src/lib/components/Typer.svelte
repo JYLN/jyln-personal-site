@@ -35,7 +35,7 @@
 </script>
 
 <div
-	class="inline-flex items-end gap-1.5 after:content-['\_'] after:text-white after:text-6xl"
+	class="inline-flex items-end gap-1.5 after:text-6xl after:text-white after:content-['\_']"
 	class:after:animate-blinking={typing === false}
 >
 	<svelte:element this={element} class={tw_class}>
