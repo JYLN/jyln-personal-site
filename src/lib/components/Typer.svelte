@@ -37,7 +37,7 @@
 </script>
 
 <div
-	class="inline-flex items-end gap-1.5 after:text-6xl after:text-white"
+	class="inline-flex items-end justify-end gap-1.5 text-3xl after:text-white after:md:text-6xl"
 	class:after-pipe={showCursor && typing === true}
 	class:after-under={typing === false}
 >
@@ -48,7 +48,7 @@
 
 <style lang="postcss">
 	.after-pipe {
-		@apply after:relative after:-top-2 after:font-bold after:content-['|'];
+		@apply after:font-bold after:content-['|'] after:md:relative after:md:-top-2;
 	}
 
 	.after-under {

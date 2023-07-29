@@ -55,7 +55,7 @@
 
 <style lang="postcss">
 	.hero {
-		@apply mx-auto flex h-[90%] max-w-[95%] flex-col-reverse items-center justify-center gap-10 px-12 py-24 lg:flex-row lg:gap-6;
+		@apply container mx-auto flex h-[90%] flex-col-reverse items-center justify-center gap-10 px-12 py-24 lg:flex-row lg:gap-6;
 	}
 
 	.hero-text-desc {
@@ -71,6 +71,6 @@
 	}
 
 	.skill-footer {
-		@apply fixed bottom-0 flex h-[10%] w-full items-center justify-center gap-1 bg-gradient-to-r from-amber-100 to-rose-300 text-3xl text-zinc-900 sm:gap-2 md:gap-4 md:text-5xl;
+		@apply fixed bottom-0 flex h-[10%] w-full flex-wrap items-center justify-center gap-1 bg-gradient-to-r from-amber-100 to-rose-300 text-3xl text-zinc-900 sm:gap-2 md:gap-4 md:text-5xl;
 	}
 </style>
