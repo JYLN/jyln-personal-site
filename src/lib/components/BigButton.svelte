@@ -11,7 +11,9 @@
 	{href}
 	target={href.includes('https://') ? '_blank' : undefined}
 >
-	<span class="w-full rounded-full bg-zinc-900 px-8 py-2 transition group-hover:bg-opacity-0">
+	<span
+		class="w-full rounded-full bg-zinc-50 px-8 py-2 transition group-hover:bg-opacity-0 group-hover:text-zinc-50 dark:bg-zinc-900"
+	>
 		<slot />
 	</span>
 </a>

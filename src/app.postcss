@@ -7,15 +7,19 @@
 
 @layer base {
 	body {
-		@apply font-jetmono dark:bg-zinc-900 dark:text-white;
+		@apply bg-zinc-50 font-jetmono text-zinc-900 dark:bg-zinc-900 dark:text-white;
 	}
 }
 
 @tailwind components;
 
 @layer components {
+	.top-buttons {
+		@apply absolute right-0 pr-5 pt-3 text-xl;
+	}
+
 	.hero-text-header {
-		@apply max-w-fit bg-gradient-to-r from-amber-100 to-rose-300 bg-clip-text font-poppins text-4xl font-extrabold tracking-tight text-transparent md:text-5xl lg:text-7xl;
+		@apply max-w-fit bg-gradient-to-r from-emerald-400 to-blue-600 bg-clip-text font-poppins text-4xl font-extrabold tracking-tight text-transparent dark:from-amber-100 dark:to-rose-300 md:text-5xl lg:text-7xl;
 	}
 
 	.prose {
@@ -35,7 +39,7 @@
 	}
 
 	.prose :is(figcaption) {
-		@apply mt-3 text-center text-sm text-zinc-400;
+		@apply mt-3 text-center text-sm text-zinc-700 dark:text-zinc-400;
 	}
 
 	.prose :is(blockquote) {
@@ -47,7 +51,7 @@
 	}
 
 	.prose :is(blockquote footer) {
-		@apply mt-5 text-lg italic text-zinc-400;
+		@apply mt-5 text-lg italic text-zinc-700 dark:text-zinc-400;
 	}
 
 	.prose :is(ul, ol) {

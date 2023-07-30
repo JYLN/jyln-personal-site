@@ -45,7 +45,7 @@
 	}
 
 	header p {
-		@apply my-4 text-zinc-300;
+		@apply my-4 text-zinc-900 dark:text-zinc-300;
 	}
 
 	aside {

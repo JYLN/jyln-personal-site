@@ -42,7 +42,7 @@
 	}
 
 	nav ul {
-		@apply mt-2 flex text-sm text-zinc-400 sm:mt-0;
+		@apply mt-2 flex text-sm text-zinc-700 dark:text-zinc-400 sm:mt-0;
 	}
 
 	nav ul li {

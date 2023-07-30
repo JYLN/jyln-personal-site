@@ -45,7 +45,7 @@
 
 <style lang="postcss">
 	.card-container {
-		@apply flex flex-col rounded-xl border border-zinc-700 bg-zinc-800 shadow-sm shadow-zinc-800/[.7];
+		@apply flex flex-col rounded-xl border border-zinc-200 shadow-sm shadow-zinc-200 dark:border-zinc-700 dark:bg-zinc-800 dark:shadow-zinc-800/[.7];
 	}
 
 	.card-body {
@@ -65,7 +65,7 @@
 	}
 
 	.card-footer {
-		@apply rounded-b-xl border-t border-zinc-700 bg-zinc-800 px-4 py-3 md:px-5 md:py-4;
+		@apply rounded-b-xl border-t bg-zinc-200 px-4 py-3 dark:border-zinc-700 dark:bg-zinc-800 md:px-5 md:py-4;
 	}
 
 	.card-footer p {

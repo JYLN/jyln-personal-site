@@ -37,7 +37,7 @@
 </script>
 
 <div
-	class="inline-flex items-end justify-end gap-1.5 text-3xl after:text-white after:md:text-6xl"
+	class="inline-flex items-end justify-end gap-1.5 text-3xl after:text-zinc-900 dark:after:text-zinc-50 after:md:text-6xl"
 	class:after-pipe={showCursor && typing === true}
 	class:after-under={typing === false}
 >

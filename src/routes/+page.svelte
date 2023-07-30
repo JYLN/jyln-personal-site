@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BigButton from '$lib/components/BigButton.svelte';
+	import ThemeButton from '$lib/components/ThemeButton.svelte';
 	import Typer from '$lib/components/Typer.svelte';
 	import skills from '$lib/data/skills.json';
 	import { tooltip } from '$lib/utils/tooltip';
@@ -10,6 +11,10 @@
 <svelte:head>
 	<title>Jaylen Baxter</title>
 </svelte:head>
+
+<nav class="top-buttons">
+	<ThemeButton />
+</nav>
 
 <section class="hero" in:fly={{ delay: 100, duration: 300, y: 250, easing: quartIn }}>
 	<div class="max-w-full md:w-2/3">
@@ -65,7 +70,7 @@
 	}
 
 	.hero-img {
-		@apply w-1/2 rounded-2xl bg-gradient-to-r from-amber-100 to-rose-300 p-6 drop-shadow-md md:w-1/3;
+		@apply w-1/2 rounded-2xl bg-gradient-to-r from-emerald-400 to-blue-600 p-6 drop-shadow-md dark:from-amber-100 dark:to-rose-300 md:w-1/3;
 	}
 
 	.social-buttons {
@@ -73,6 +78,6 @@
 	}
 
 	.skill-footer {
-		@apply fixed bottom-0 flex h-[10%] w-full flex-wrap items-center justify-center gap-1 bg-gradient-to-r from-amber-100 to-rose-300 text-3xl text-zinc-900 sm:gap-2 md:gap-4 md:text-5xl;
+		@apply fixed bottom-0 flex h-[10%] w-full flex-wrap items-center justify-center gap-1 bg-gradient-to-r from-emerald-400 to-blue-600 text-3xl text-zinc-50 dark:from-amber-100 dark:to-rose-300 dark:text-zinc-900 sm:gap-2 md:gap-4 md:text-5xl;
 	}
 </style>
