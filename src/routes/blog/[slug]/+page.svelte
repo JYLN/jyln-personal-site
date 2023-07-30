@@ -34,7 +34,7 @@
 
 <style lang="postcss">
 	article {
-		@apply mx-auto max-w-max px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pt-10;
+		@apply mx-auto max-w-5xl px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pt-10;
 	}
 
 	nav {
