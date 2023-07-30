@@ -21,9 +21,13 @@
 	</header>
 
 	<aside>
-		{#each data.posts as post}
-			<BlogCard {post} />
-		{/each}
+		{#if data.posts.length > 0}
+			{#each data.posts as post}
+				<BlogCard {post} />
+			{/each}
+		{:else}
+			<p>No blog posts yet! Come back soon!</p>
+		{/if}
 	</aside>
 </section>
 
@@ -46,5 +50,9 @@
 
 	aside {
 		@apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+	}
+
+	aside p {
+		@apply font-inter text-lg;
 	}
 </style>
