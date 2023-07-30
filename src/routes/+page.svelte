@@ -13,6 +13,12 @@
 </svelte:head>
 
 <nav class="top-buttons">
+	<a href="https://twitter.com/safetyjay_" target="_blank">
+		<i class="bx bxl-twitter" />
+	</a>
+	<a href="https://instagram.com/safetyjay_" target="_blank">
+		<i class="bx bxl-instagram" />
+	</a>
 	<ThemeButton />
 </nav>
 

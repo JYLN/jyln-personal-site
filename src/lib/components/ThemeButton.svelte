@@ -57,6 +57,6 @@
 </svelte:head>
 
 <button on:click={toggleDark} class:hidden type="button">
-	<i class="bx bxs-sun bx-fw" class:hidden={!dark} />
-	<i class="bx bxs-moon bx-fw" class:hidden={dark} />
+	<i class="bx bxs-sun" class:hidden={!dark} />
+	<i class="bx bxs-moon" class:hidden={dark} />
 </button>
