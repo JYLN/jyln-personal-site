@@ -1,6 +1,7 @@
 <script lang="ts">
 	import BigButton from '$lib/components/BigButton.svelte';
 	import BlogCard from '$lib/components/BlogCard.svelte';
+	import Typer from '$lib/components/Typer.svelte';
 
 	export let data;
 </script>
@@ -26,7 +27,12 @@
 				<BlogCard {post} />
 			{/each}
 		{:else}
-			<p>No blog posts yet! Come back soon!</p>
+			<Typer
+				element="p"
+				words="No blog posts yet! Come back soon!"
+				speed={90}
+				tw_class="font-inter text-lg"
+			/>
 		{/if}
 	</aside>
 </section>
@@ -50,9 +56,5 @@
 
 	aside {
 		@apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
-	}
-
-	aside p {
-		@apply font-inter text-lg;
 	}
 </style>

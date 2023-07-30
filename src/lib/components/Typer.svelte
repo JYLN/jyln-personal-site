@@ -37,7 +37,8 @@
 </script>
 
 <div
-	class="inline-flex items-end justify-end gap-1.5 text-3xl after:text-zinc-900 dark:after:text-zinc-50 after:md:text-6xl"
+	class:h1={element === 'h1'}
+	class:p={element === 'p'}
 	class:after-pipe={showCursor && typing === true}
 	class:after-under={typing === false}
 >
@@ -47,8 +48,20 @@
 </div>
 
 <style lang="postcss">
+	div {
+		@apply inline-flex items-end gap-1.5 after:text-zinc-900 dark:after:text-zinc-50;
+	}
+
+	.h1 {
+		@apply after:text-3xl after:md:-top-2 after:md:text-6xl;
+	}
+
+	.p {
+		@apply after:text-xl;
+	}
+
 	.after-pipe {
-		@apply after:font-bold after:content-['|'] after:md:relative after:md:-top-2;
+		@apply after:font-bold after:content-['|'] after:md:relative;
 	}
 
 	.after-under {
